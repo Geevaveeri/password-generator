@@ -1,5 +1,5 @@
 // Assignment code here
-
+var result = "";
 function criteria() {
 
   //deciding if password will use capital letters
@@ -71,28 +71,25 @@ function passwordLength() {
   return userLength;
 };
 
-function createPassword(length, chars) {
-  var result = "";
-  var characters = chars;
-  // var charactersLength = characters.length;
-
-  for (i = 0; i < length; i++) {
-    result += characters.charAt(Math.floor(Math.random() * characters.length));
-  }
-  debugger;
-  return result;
-};
-
 // function to generate the password
 function generatePassword() {
-
-  passwordLength();
-  criteria();
-  createPassword(passwordLength, criteria);
-  console.log(passwordLength() + " length");
-  console.log(createPassword() + " results");
-
+  var passLen = passwordLength();
+  var critString = criteria();
+  createPassword();
   return createPassword();
+
+  // Function to randomize the password arrays
+  function createPassword() {
+    var length = passLen,
+      charset = critString,
+      retVal = "";
+    for (var i = 0, n = charset.length; i < length; ++i) {
+      retVal += charset.charAt(Math.floor(Math.random() * n));
+    }
+
+    return retVal;
+  }
+
 };
 
 
