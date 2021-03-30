@@ -1,1 +1,2 @@
 # Password Generator Starter Code
+Created an application that can generate a random password with any combination of capital letters, lowercase letters, numbers, and symbols. User can select the length of the password anywhere between 8 and 128 characters. Password will print into the text box after all the criteria is selected by the user.![Password generator screenshot](https://user-images.githubusercontent.com/59940979/112917193-67d38200-90bf-11eb-8ea8-306ede9b7881.PNG)
