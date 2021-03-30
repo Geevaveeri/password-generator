@@ -248,7 +248,6 @@ function generatePassword() {
   // variable holding the password array
   var critString = criteria();
   createPassword();
-  debugger;
   return createPassword();
 
   // Function to randomize the password arrays
