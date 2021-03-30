@@ -219,13 +219,24 @@ function passwordLength() {
     userLength = prompt("How long would you like your password? Please select between 8 and 128.");
 
   }
+
   if (userLength < 8 || userLength > 128) {
-    window.alert("Please select a value between 8 and 128.");
+    window.alert("Please select a number between 8 and 128.");
+    userLength = "";
     // Call function again so they can enter a new value
     passwordLength();
   }
+  if (isNaN(userLength)) {
+    window.alert("Please select a number between 8 and 128.");
+    userLength = +userLength || passwordLength();
+    delete (userLength);
+    // Call function again so they can enter a new value
+
+  }
+
   userLength = parseInt(userLength);
 
+  console.log(userLength);
 
   return userLength;
 };
@@ -237,6 +248,7 @@ function generatePassword() {
   // variable holding the password array
   var critString = criteria();
   createPassword();
+  debugger;
   return createPassword();
 
   // Function to randomize the password arrays
