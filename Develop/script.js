@@ -1,4 +1,6 @@
 // Assignment code here
+
+// function for creating the array that the password will use
 function criteria() {
 
   //deciding if password will use capital letters
@@ -230,7 +232,9 @@ function passwordLength() {
 
 // function to generate the password
 function generatePassword() {
+  // variable holding the password length
   var passLen = passwordLength();
+  // variable holding the password array
   var critString = criteria();
   createPassword();
   return createPassword();
