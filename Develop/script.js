@@ -1,5 +1,4 @@
 // Assignment code here
-var result = "";
 function criteria() {
 
   //deciding if password will use capital letters
@@ -33,8 +32,8 @@ function criteria() {
     symbolConfirm = ["!", "#", "$", "%", "&", "(", ")", "+", "-", ".", "/", ":", ";", "<", "=", ">", "?", "@", "[", "^", "_"];
 
   }
-  // function to create the array used for password generation
-
+  //create the array used for password generation
+  // 1
   if (capitalConfirm &&
     lowerConfirm === false &&
     numberConfirm === false &&
@@ -46,7 +45,165 @@ function criteria() {
     return combinedArray;
 
   }
+  // 2
+  if (capitalConfirm === false &&
+    lowerConfirm &&
+    numberConfirm === false &&
+    symbolConfirm === false) {
 
+    var combinedArray = lowerConfirm;
+    combinedArray = combinedArray.join('');
+
+    return combinedArray;
+
+  }
+  // 3
+  if (capitalConfirm &&
+    lowerConfirm &&
+    numberConfirm === false &&
+    symbolConfirm === false) {
+
+    var combinedArray = [...capitalConfirm, ...lowerConfirm];
+    combinedArray = combinedArray.join('');
+
+    return combinedArray;
+
+  }
+  // 4
+  if (capitalConfirm === false &&
+    lowerConfirm === false &&
+    numberConfirm &&
+    symbolConfirm === false) {
+
+    var combinedArray = numberConfirm;
+    combinedArray = combinedArray.join('');
+
+    return combinedArray;
+
+  }
+  // 5
+  if (capitalConfirm &&
+    lowerConfirm === false &&
+    numberConfirm &&
+    symbolConfirm === false) {
+
+    var combinedArray = [...capitalConfirm, ...numberConfirm];
+    combinedArray = combinedArray.join('');
+
+    return combinedArray;
+  }
+  // 6
+  if (capitalConfirm === false &&
+    lowerConfirm &&
+    numberConfirm &&
+    symbolConfirm === false) {
+
+    var combinedArray = [...lowerConfirm, ...numberConfirm];
+    combinedArray = combinedArray.join('');
+
+    return combinedArray;
+  }
+  // 7
+  if (capitalConfirm &&
+    lowerConfirm &&
+    numberConfirm &&
+    symbolConfirm === false
+  ) {
+
+    var combinedArray = [...capitalConfirm, ...lowerConfirm, ...numberConfirm];
+    combinedArray = combinedArray.join('');
+
+    return combinedArray;
+  }
+  // 8
+  if (capitalConfirm === false &&
+    lowerConfirm === false &&
+    numberConfirm === false &&
+    symbolConfirm) {
+
+    var combinedArray = symbolConfirm;
+    combinedArray = combinedArray.join('');
+
+    return combinedArray;
+
+  }
+  // 9
+  if (capitalConfirm &&
+    lowerConfirm === false &&
+    numberConfirm === false &&
+    symbolConfirm) {
+
+    var combinedArray = [...capitalConfirm, ...symbolConfirm];
+    combinedArray = combinedArray.join('');
+
+    return combinedArray;
+  }
+  // 10
+  if (capitalConfirm === false &&
+    lowerConfirm &&
+    numberConfirm === false &&
+    symbolConfirm) {
+
+    var combinedArray = [...lowerConfirm, ...symbolConfirm];
+    combinedArray = combinedArray.join('');
+
+    return combinedArray;
+  }
+  // 11
+  if (capitalConfirm &&
+    lowerConfirm &&
+    numberConfirm === false &&
+    symbolConfirm) {
+
+    var combinedArray = [...capitalConfirm, ...lowerConfirm, ...symbolConfirm];
+    combinedArray = combinedArray.join('');
+
+    return combinedArray;
+  }
+  // 12
+  if (capitalConfirm === false &&
+    lowerConfirm === false &&
+    numberConfirm &&
+    symbolConfirm) {
+
+    var combinedArray = [...numberConfirm, ...symbolConfirm];
+    combinedArray = combinedArray.join('');
+
+    return combinedArray;
+  }
+  // 13
+  if (capitalConfirm &&
+    lowerConfirm === false &&
+    numberConfirm &&
+    symbolConfirm) {
+
+    var combinedArray = [...capitalConfirm, ...numberConfirm, ...symbolConfirm];
+    combinedArray = combinedArray.join('');
+
+    return combinedArray;
+  }
+  // 14
+  if (capitalConfirm === false &&
+    lowerConfirm &&
+    numberConfirm &&
+    symbolConfirm) {
+
+    var combinedArray = [...lowerConfirm, ...numberConfirm, ...symbolConfirm];
+    combinedArray = combinedArray.join('');
+
+    return combinedArray;
+  }
+  // 15
+  if (capitalConfirm &&
+    lowerConfirm &&
+    numberConfirm &&
+    symbolConfirm) {
+
+    var combinedArray = [...capitalConfirm, ...lowerConfirm, ...numberConfirm, ...symbolConfirm];
+    combinedArray = combinedArray.join('');
+
+    return combinedArray;
+  }
 };
 
 // Create the random password
